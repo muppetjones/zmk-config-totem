@@ -24,13 +24,13 @@ compatible = "zmk,combos";
 /* Layers */
 combo_med_mo {
     timeout-ms = <50>;
-    key-positions = <33 34>;
+    key-positions = <32 34>;
     bindings = <&mo MED>;
 };
 
 combo_fn_mo {
     timeout-ms = <50>;
-    key-positions = <35 36>;
+    key-positions = <35 37>;
     bindings = <&mo ADJ>;
 };
 
@@ -40,7 +40,7 @@ COMBO(semicolon, &kp SEMI, 6 7, BASE)
 
 /* Brackets */
 COMBO(left_parenthesis, &kp LEFT_PARENTHESIS, 6 7, NUM)
-COMBO(right_parenthesis, &kp RIGHT_PARENTHESIS, 78, NUM)
+COMBO(right_parenthesis, &kp RIGHT_PARENTHESIS, 7 8, NUM)
 COMBO(parentheses, &macro_parentheses, 7 8 9, NUM)
 COMBO(left_bracket, &kp LEFT_BRACKET, 16 17, NUM)
 COMBO(right_bracket, &kp RIGHT_BRACKET, 17 18, NUM)
