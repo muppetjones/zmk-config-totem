@@ -34,6 +34,9 @@ combo_fn_mo {
     bindings = <&mo ADJ>;
 };
 
+COMBO(tab, &kp TAB, 27 28, BASE)
+COMBO(semicolon, &kp SEMI, 6 7, BASE)
+
 /* Brackets */
 COMBO(left_parenthesis, &kp LEFT_PARENTHESIS, 1 2, NUM)
 COMBO(right_parenthesis, &kp RIGHT_PARENTHESIS, 2 3, NUM)
