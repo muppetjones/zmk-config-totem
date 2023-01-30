@@ -59,6 +59,11 @@
   };
 
   behaviors {
+    &lt {
+      retro-tap;
+      tapping_term_ms = <100>;
+      flavor = "hold-preferred";
+    }
 
     skq: sticky_key_quick_release {
       compatible = "zmk,behavior-sticky-key";
@@ -91,6 +96,17 @@
       bindings = <&mo>, <&kp>;
     };
 
+    // A hold-tap that activates without delay (like `&mo`)
+    mo_tap: mo_with_tap {
+      compatible = "zmk,behavior-hold-tap";
+      label = "MO_WITH_TAP";
+      #binding-cells = <2>;
+      tapping_term_ms = <0>;
+      retro-tap;
+      flavor = "hold-preferred";
+      bindings = <&mo>, <&kp>;
+    };
+
   };
 
         keymap {
@@ -109,7 +125,7 @@ label= "BASE"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
     &kp Q       &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp ESC
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-                                        &skq LGUI   &skq LSHFT  MO(NUM)         MO(NAV)     &kp SPACE   &skq HYP
+                                        &skq LGUI   &skq LSHFT  MO(NUM)        &lt NAV SPACE &skq HYP   &kp ESC
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                         >;
                 };
