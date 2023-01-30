@@ -67,7 +67,7 @@
       tapping_term_ms = <100>;
       flavor = "hold-preferred";
       bindings = <&lt>, <&kp>;
-    }
+    };
 
     skq: sticky_key_quick_release {
       compatible = "zmk,behavior-sticky-key";
