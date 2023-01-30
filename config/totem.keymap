@@ -59,10 +59,14 @@
   };
 
   behaviors {
-    &lt {
+    qlt: quick_layer_tap {
+      compatible = "zmk,behavior-hold-tap";
+      label = "QUICK_LT";
+      #binding-cells = <2>;
       retro-tap;
       tapping_term_ms = <100>;
       flavor = "hold-preferred";
+      bindings = <&lt>, <&kp>;
     }
 
     skq: sticky_key_quick_release {
@@ -125,7 +129,7 @@ label= "BASE"                              ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
     &kp Q       &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp ESC
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-                                        &skq LGUI   &skq LSHFT  MO(NUM)        &lt NAV SPACE &skq HYP   &kp ESC
+                                        &skq LGUI   &skq LSHFT  MO(NUM)        &qlt NAV SPACE &skq HYP   &kp ESC
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                         >;
                 };
