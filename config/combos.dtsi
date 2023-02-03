@@ -73,16 +73,16 @@ COMBO(braces, &macro_braces, 27 28 29, NUM)
 COMBO(undo, &kp LG(Z), 21 22, BASE)
 COMBO(cut, &kp LG(X), 22 24, BASE)
 COMBO(copy, &kp LG(C), 22 23, BASE)
-COMBO(paste, &kp LG(V), 22 23 24, BASE)
+COMBO(paste, &kp LG(V), 23 24, BASE)
 COMBO(select_all, &kp LG(A), 20 23, BASE)
 COMBO(caps_word, &caps_word, 5 15, BASE)
 
 /* System */
 // COMBO(power, &macro_power, 4 5, BASE)
 COMBO(menu_search, &kp LG(LS(SLASH)), 16 17 18, BASE)
-COMBO(spotlight, &kp LG(SPACE), 11 12 13, BASE)
-COMBO(mic_mute_left, &kp LG(BACKSLASH), 14 25, BASE)
-COMBO(mic_mute_right, &kp LG(BACKSLASH), 15 26, BASE)
+COMBO(spotlight, &kp LA(SPACE), 11 12 13, BASE)
+COMBO(mic_mute_left, &kp LG(D), 14 25, BASE)
+COMBO(mic_mute_right, &kp LG(D), 15 26, BASE)
 
 /* Window management *
 COMBO(tile_left, &kp LG(LC(LA(LEFT))), 27 28, BASE)
